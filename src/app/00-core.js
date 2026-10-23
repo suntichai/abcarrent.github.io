@@ -1,6 +1,6 @@
 const KEY='ab-carrent-v1', money=n=>'฿'+Number(n||0).toLocaleString('th-TH'), $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const defaultCompany={name:'AB CARRENT รถเช่านครศรีธรรมราช',taxId:'',phone:'',email:'',address:'',logo:'',vatRegistered:false};
-const APP_RELEASE_SEQUENCE=2;
+const APP_RELEASE_SEQUENCE=3;
 function appVersion(){const year=String(new Date().getFullYear()+543).slice(-2),sequence=String(APP_RELEASE_SEQUENCE).padStart(3,'0'),check=String([...`${year}${sequence}`].reduce((sum,digit)=>sum+Number(digit),0)%10);return `${year}.${sequence}${check}`}
 const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
 const isoOffset=(n)=>{const d=new Date();d.setDate(d.getDate()+n);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
